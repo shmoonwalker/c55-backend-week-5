@@ -61,9 +61,9 @@ CREATE TABLE borrowing (
     id SERIAL PRIMARY KEY,
     member_id INT NOT NULL REFERENCES member(id) ON DELETE CASCADE,
     book_copy_id INT NOT NULL REFERENCES book_copy(id) ON DELETE CASCADE,
-    borrowed_at DATE NOT NULL,
-    due_date DATE NOT NULL,
-    returned_at DATE ,
+    borrowed_at TIMESTAMP NOT NULL,
+    due_date TIMESTAMP NOT NULL,
+    returned_at TIMESTAMP ,
     fine_eur NUMERIC(8, 2) NOT NULL DEFAULT 0,
 
     CHECK (fine_eur >= 0),
