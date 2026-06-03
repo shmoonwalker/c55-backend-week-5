@@ -1,6 +1,3 @@
-create database library_db;
-\c library_db;
-
 CREATE TABLE member (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
